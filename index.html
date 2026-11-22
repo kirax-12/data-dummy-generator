@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Generator Data Dummy Indonesia — Nama, Alamat, No HP Fiktif</title>
+<meta name="description" content="Buat data dummy khas Indonesia buat testing aplikasi: nama, email, nomor HP, alamat, kota, pekerjaan, perusahaan. Ekspor ke JSON atau CSV. Semua data fiktif, dibuat acak di browser.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Space+Mono:wght@400;700&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="tape" aria-hidden="true">
+  <div class="tape-track">
+    <span>Data Dummy Indonesia · Nama Fiktif · Buat Testing · Ekspor JSON / CSV · Bukan Data Asli · </span>
+    <span>Data Dummy Indonesia · Nama Fiktif · Buat Testing · Ekspor JSON / CSV · Bukan Data Asli · </span>
+  </div>
+</div>
+
+<header class="app-header">
+  <h1>Data Dummy <span class="hl">Indonesia</span></h1>
+  <p class="app-sub">butuh 100 user palsu buat testing? jangan pakai data asli ↓</p>
+</header>
+
+<main>
+  <section class="panel" aria-label="Pengaturan data">
+    <h2>Atur datanya</h2>
+    <div class="field">
+      <div class="label-row">
+        <label for="count">Jumlah data</label>
+        <span class="readout"><strong id="count-label">25</strong> baris</span>
+      </div>
+      <input id="count" type="range" min="5" max="1000" step="5" value="25">
+      <div class="slider-scale"><span>5</span><span>1000</span></div>
+    </div>
+    <fieldset class="fields-box">
+      <legend>Kolom yang dibuat</legend>
+      <label class="check"><input type="checkbox" class="col-toggle" value="nama" checked disabled> Nama (selalu ada)</label>
+      <label class="check"><input type="checkbox" class="col-toggle" value="email" checked> Email</label>
+      <label class="check"><input type="checkbox" class="col-toggle" value="telepon" checked> Nomor HP</label>
+      <label class="check"><input type="checkbox" class="col-toggle" value="alamat" checked> Alamat</label>
+      <label class="check"><input type="checkbox" class="col-toggle" value="kota" checked> Kota</label>
+      <label class="check"><input type="checkbox" class="col-toggle" value="pekerjaan" checked> Pekerjaan</label>
+      <label class="check"><input type="checkbox" class="col-toggle" value="perusahaan"> Perusahaan</label>
+      <label class="check"><input type="checkbox" class="col-toggle" value="umur"> Umur</label>
+    </fieldset>
+    <button id="gen-btn" class="tw-download" type="button">🎲 Buat Data Baru</button>
+    <p class="fineprint">Semua nama, nomor, dan alamat di halaman ini FIKTIF hasil acakan — kemiripan dengan orang beneran itu kebetulan. Jangan dipakai buat menipu ya.</p>
+  </section>
+
+  <section class="panel" aria-label="Hasil data">
+    <h2>Hasilnya <span class="hint" id="preview-note"></span></h2>
+    <div class="table-wrap">
+      <table class="rincian" id="data-table"></table>
+    </div>
+    <div class="tw-buttons">
+      <button id="json-btn" class="tw-download" type="button">⬇ Unduh JSON</button>
+      <button id="csv-btn" class="tw-download alt" type="button">⬇ Unduh CSV</button>
+      <button id="copy-btn" class="tw-download alt" type="button">📋 Salin JSON</button>
+    </div>
+    <p class="fineprint" id="status"></p>
+  </section>
+</main>
+
+<footer class="app-footer">
+  <p>Dibuat oleh Remike Dev · Generator Data Dummy Indonesia — dibuat lokal di browser.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
